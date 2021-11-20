@@ -1,0 +1,141 @@
+:root
+{
+    --primarybtn: hsl(0, 0%, 95%);
+    --secondary: hsla(0, 0%, 100%, 0.75);
+}
+html
+{
+    box-sizing: border-box;
+}
+body
+{
+    margin-top: 7rem;
+    font-family: 'Big Shoulders Display', cursive;
+    font-family: 'Lexend Deca', sans-serif;
+   
+}
+h1
+{
+    color: var(--primarybtn);
+    margin: 20px auto;
+    font-family: 'Big Shoulders Display', cursive;
+}
+p
+{
+    color: hsla(0, 0%, 100%, 0.75);
+    padding-top: 5px;
+    font-family: 'Lexend Deca', sans-serif;
+    word-spacing: 2.5px;
+}
+
+.img-class
+{
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 20px;
+    
+}
+.top-container
+{
+    max-height: 100vh;
+    max-width: 60vw;
+    margin: 3rem auto;
+    display: grid;
+    grid-gap: 0;
+    grid-template-areas:
+    'sedan-main suv-main luxury-main';
+}
+
+.btn-click
+{
+    border-radius: 40px;
+    padding: 13px 40px;
+    border-style: hidden;
+    font-size: 15px;
+    margin-top: 4rem;
+}
+.btn-click:nth-child(1)
+{
+    color:  hsl(31, 77%, 52%);
+    /* margin-top: 3.5rem */
+}
+.btn-click:nth-child(2)
+{
+    color:  hsl(184, 100%, 22%);
+}
+
+.btn-click:nth-child(3)
+{
+    color:  hsl(179, 100%, 13%);
+}
+.btn-click:hover
+{
+    background-color: transparent;
+    color: hsla(0, 0%, 100%, 0.75);
+    border: 2px solid hsl(0, 0%, 95%);
+    font-size: 15px;
+    
+}
+
+.sedan-main
+{
+
+    grid-area: sedan-main;
+    background-color: hsl(31, 77%, 52%);
+    padding: 3rem;
+    border-radius: 10px 0 0 10px;
+    padding-right: 3rem;
+}
+.suv-main
+{
+    grid-area: suv-main;
+    background-color: hsl(184, 100%, 22%);
+    padding: 3rem;
+    padding-right: 3rem;
+}
+.luxury-main
+{
+    grid-area: luxury-main;
+    background-color: hsl(179, 100%, 13%);
+    padding: 3rem;
+    border-radius: 0 10px 10px 0;
+    padding-right: 3rem;
+}
+
+@media(max-width: 700px)
+{
+    .top-container
+    {
+        max-width: 80vw;
+        grid-template-areas:
+        'sedan-main'
+        'suv-main'
+        'luxury-main';
+        margin: 10px auto;
+         
+    }
+    .img-class
+    {
+        margin-bottom: 10px;
+    }
+   .sedan-main
+   {
+       border-radius: 10px 10px 0 0;
+   } 
+   .luxury-main
+   {
+       border-radius: 0 0 10px 10px;
+       margin-bottom: 3rem;
+   }
+   .btn-click
+   {
+       margin-top:3rem;
+   }
+   p
+   {
+       padding: 0;
+       margin: 0;
+   }
+}
+
